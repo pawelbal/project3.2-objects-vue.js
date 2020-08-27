@@ -30,31 +30,84 @@ body {
   font-family: 'DINP-R', arial, serif;
 }
 
-header {
-  font-size: 2em;
-  margin: 20px;
-  color: $caption-color;
-  text-align: center;
-  background: $foreground-color url('../images/design/heading.png') center 20px no-repeat;
-  padding: 60px 30px 30px;
-  background-size: 160px;
+body, html{
+  width: 100%;
+  overflow-x: hidden;
 }
 
-main {
-  color: $foreground-color;
-  text-align: center;
-  padding: 10px;
+.component{
+  margin-bottom: 0px;
+  width: 100%;
+  min-height: 10px;
+  overflow: hidden;
 }
 
-a {
-  color: $link-color;
-}
-
-address {
-  color: $accent-color;
-}
-
-.logo {
+.wrapper{
+  max-width: 1184px;
   margin: 0 auto;
-  display: block;
+  position: relative;
+  padding: 32px;
+  min-height: 10px;
+  overflow: hidden;
+
 }
+
+h1{
+  font-size: 32px;
+
+  @media (min-width: $tab){
+    font-size: 36px;
+  }
+  @media (min-width: $pc1){
+    font-size: 40px;
+  }
+}
+h2{
+  font-size: 28px;
+
+  @media (min-width: $tab){
+    font-size: 32px;
+  }
+  @media (min-width: $pc1){
+    font-size: 36px;
+  }
+}
+h3{
+  font-size: 26px;
+  
+  @media (min-width: $tab){
+    font-size: 28px;
+  }
+  @media (min-width: $pc1){
+    font-size: 32px;
+  }
+}
+h4{
+  font-size: 24px;
+  
+  @media (min-width: $tab){
+    font-size: 26px;
+  }
+  @media (min-width: $pc1){
+    font-size: 28px;
+  }
+}
+h5{
+  font-size: 20px;
+  
+  @media (min-width: $tab){
+    font-size: 22px;
+  }
+  @media (min-width: $pc1){
+    font-size: 24px;
+  }
+}
+h6{
+  font-size: 18px;
+  
+  @media (min-width: $pc1){
+    font-size: 20px;
+  }
+}
+
+

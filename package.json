@@ -40,7 +40,8 @@
     "node": ">=10.13.0"
   },
   "dependencies": {
-    "autoprefixer": "^9.7.6"
+    "autoprefixer": "^9.7.6",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

@@ -18,6 +18,7 @@
 /* Vendor */
 
 /* Components */
+@import 'base/main';
 
 /* Browser specific styles */
 @import 'dirty/hacks';
@@ -28,6 +29,7 @@ body {
   background: $body-background-color;
   color: $foreground-color;
   font-family: 'DINP-R', arial, serif;
+  text-align: center;
 }
 
 body, html{

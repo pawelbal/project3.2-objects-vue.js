@@ -3,9 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <title>Project3.2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    
+    <div id="app" class="wrapper">
+
+        <div v-for="product in products" class="main_box">
+            <img :src="product.img" class="main_img">
+            <h2 class="main_h2">{{product.name}}</h2>
+            <ul>
+              <li v-for="cat in product.category" class="main_li">{{cat}}</li>
+            </ul>
+            <h3 class="main_h3">{{product.price}}</h3>
+            <button class="main_btn">ADD</button>
+        </div>
+
+    </div>
     
   </body>
 </html>

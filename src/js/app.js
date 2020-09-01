@@ -3,6 +3,7 @@ import '../scss/app.scss';
 
 // Your JS Code goes here
 
+
 let product1 = {
     name: 'Name 1',
     category: ['category A', 'category B', 'category C'],
@@ -48,12 +49,40 @@ let vm = new Vue({
     el: "#app",
     data: {
         message: "hello",
+        hidden: false,
         
         products: [product1, product2, product3, product4, product5],
+
+        product:{
+            name:"",
+            category:[],
+            price:"",
+            img: 'images/content/no-camera.png',
+        },
         
     },
 
     methods: {
+
+        addProduct(){
+
+            this.product.category.sort(),
+
+            this.products.push({
+                name: this.product.name,
+                category: this.product.category,
+                price: this.product.price,
+                img: this.product.img,
+            })
+            this.product.name= "",
+            this.product.category=[],
+            this.product.price= "",
+            this.hidden = false,
+
+
+            console.log(this.products) ,
+            console.log(this.category)    
+        }   
 
     }
 })

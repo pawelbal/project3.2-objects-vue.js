@@ -6,17 +6,55 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
-    <div id="app" class="wrapper">
+    <div id="app" class="component">
 
+      <div class="wrapper">
         <div v-for="product in products" class="main_box">
-            <img :src="product.img" class="main_img">
-            <h2 class="main_h2">{{product.name}}</h2>
-            <ul>
-              <li v-for="cat in product.category" class="main_li">{{cat}}</li>
-            </ul>
-            <h3 class="main_h3">{{product.price}}</h3>
-            <button class="main_btn">ADD</button>
+          <img :src="product.img" class="main_img">
+          <h2 class="main_h2">{{product.name}}</h2>
+          <ul>
+            <li v-for="cat in product.category" class="main_li">{{cat}}</li>
+          </ul>
+          <h3 class="main_h3">{{product.price}} zł</h3>
+          <button class="main_btn">ADD</button>
         </div>
+     </div>
+        
+
+     <div class="wrapper main_add">
+          <button v-on:click="hidden = !hidden" class="main_btn_add">+ Add Product</button>
+
+          <div v-show="hidden" class="main_window">
+            <label for="name">Name:</label>
+            <input v-model="product.name" type="text" name="name" id="name" class="test1">
+            <label for="price">Price:</label>
+            <input v-model="product.price" type="number" name="price" id="price" class="test1" >
+            <div class="main_select">
+              <h4>Categories:</h4>
+                <ul>
+                  <li><input type="checkbox" id="cata" value="category A" v-model="product.category"><label for="cata">Category A</label></li>
+                  <li><input type="checkbox" id="catb" value="category B" v-model="product.category"><label for="catb">Category B</label></li>
+                  <li><input type="checkbox" id="catc" value="category C" v-model="product.category"><label for="catc">Category C</label></li>
+                  <li><input type="checkbox" id="catd" value="category D" v-model="product.category"><label for="catd">Category D</label></li>
+                  <li><input type="checkbox" id="cate" value="category E" v-model="product.category"><label for="cate">Category E</label></li>
+                  <li><input type="checkbox" id="catf" value="category F" v-model="product.category"><label for="catf">Category F</label></li>
+                </ul>
+              <!-- <div><label for="cata">category A</label><input type="checkbox" name="cata" id="cata" class="test2" value="category A" ></div>
+              <div><label for="catb">category B</label><input type="checkbox" name="catb" id="catb" class="test2" value="category B"></div>
+              <div><label for="catc">category C</label><input type="checkbox" name="catc" id="catc" class="test2" value="category C"></div>
+              <div><label for="catd">category D</label><input type="checkbox" name="catd" id="catd" class="test2" value="category D"></div>
+              <div><label for="cate">category E</label><input type="checkbox" name="cate" id="cate" class="test2" value="category E"></div>
+              <div><label for="catf">category F</label><input type="checkbox" name="catf" id="catf" class="test2" value="category F"></div> -->
+            </div>
+  <br>
+            <button v-on:click="addProduct" class="main_btn_add" id="main_btn_add">+Add</button>
+            <button v-on:click="hidden = !hidden" class="main_btn_add" id="main_btn_cancel">Cancel</button>
+            <p>{{product.name}}</p>
+            <p>{{product.price}}</p>
+            
+          </div>
+     </div>
+
 
     </div>
     
